@@ -42,22 +42,23 @@ def print_recipients
   # Write a method that uses the output of calculate_recipients
   # and returns a list of emails separated by commas
   # Ex) "abc@email.com, def@email.com, ghi@email.com"
-  calculate_recipients.join(", ")
+  puts calculate_recipients.join(", ")
 end
 
 def print_one_article(article)
   # Write a method that will take an article hash
   # and print the title, author and text as a formatted string
   # See the README/sample output for examples
-  puts "#{article[:title]}"
-  puts "by: #{article[:author]}"
-  binding.pry 
-  puts "#{article[:text]}"
+  ARTICLES.each do |article|
+    puts "#{article[:title]}"
+    puts "by: #{article[:author]}"
+    puts "#{article[:text]}"
+  end 
 end
-
 def print_many_articles(articles)
   # Write a method that will take in an array of article hashes
   # and format each one using the print_one_article method
+  print_one_article(articles)
 end
 
 def format_campus_location(campus)
