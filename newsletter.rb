@@ -30,8 +30,8 @@ ARTICLES = [
 def calculate_recipients
   # Using the SUBSCRIBERS and UNSUBSCRIBED arrays,
   # write a method that will return an array of only the subscribers who haven't unsubscribed
-  valid_subscribers = SUBSCRIBERS.find_all {|email| UNSUBSCRIBED.include?(email) == false}
-  valid_subscribers 
+  valid_emails = SUBSCRIBERS.find_all {|email| UNSUBSCRIBED.include?(email) == false}
+  valid_emails
 end
 
 def first_n_articles(number_of_articles)
